@@ -5,12 +5,19 @@
                 <h1 class="text">PORTFOLIO</h1>
             </div>
             <div class="nav__right">
-                <li><button><a class="nav-link nav-link__home" href="{{ path('home') }}">Accueil</a></button></li>
-                <li><button><a class="nav-link nav-link__about" href="{{ path('about_me') }}">A propos de moi</a></button></li>
-                <li><button><a class="nav-link nav-link__projects" href="{{ path('project') }}">Mes projets</a></button></li>
+                <li><button><a class="nav-link nav-link__home" href="{{ path('home') }}">home</a></button></li>
+                <li><button><a class="nav-link nav-link__about" href="{{ path('about_me') }}">about me</a></button></li>
+                <li><button><a class="nav-link nav-link__projects" href="{{ path('project') }}">projects</a></button></li>
             </div>
         </ul>
     </nav>
 </header>
+{# <section class="banner"></section> #}
+<script type="text/javascript">
+    window.addEventListener("scroll", function() {
+        var header = document.querySelector(".nav");
+        header.classList.toggle("sticky", window.scrollY > 0)
+    })
+</script>
 
 <body>

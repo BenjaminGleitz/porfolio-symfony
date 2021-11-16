@@ -17,6 +17,14 @@
                             </div>
                         </div>
                     </div>
+                    <div class="project_card">
+                        <img src="{{ asset('pictures/' ~ project.image) }}" alt="">
+                        <div class="project_card__name">
+                            <div class="button_container">
+                                <a class="btn_card" href="">{{ project.name }}</a>
+                            </div>
+                        </div>
+                    </div>
                 {% endfor %}
             </div>
         </div>

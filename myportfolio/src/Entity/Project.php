@@ -37,6 +37,16 @@ class Project
      */
     private $github_link;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $css;
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $technos;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -86,6 +96,30 @@ class Project
     public function setGithubLink(string $github_link): self
     {
         $this->github_link = $github_link;
+
+        return $this;
+    }
+
+    public function getCss(): ?string
+    {
+        return $this->css;
+    }
+
+    public function setCss(string $css): self
+    {
+        $this->css = $css;
+
+        return $this;
+    }
+
+    public function getTechnos(): ?string
+    {
+        return $this->technos;
+    }
+
+    public function setTechnos(string $technos): self
+    {
+        $this->technos = $technos;
 
         return $this;
     }

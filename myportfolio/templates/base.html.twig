@@ -11,10 +11,15 @@
         </title>
         {% block stylesheets %}
             <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Anton&family=Permanent+Marker&family=Roboto&display=swap" rel="stylesheet">
         {% endblock %}
 
         {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
+        <script src="https://kit.fontawesome.com/fb0ca55657.js" crossorigin="anonymous"></script>
+        <script src="{{ asset('js/app.js') }}" crossorigin="anonymous"></script>
+        <script src="{{ asset('js/components/toggleMenu.js') }}" crossorigin="anonymous"></script>
         {% endblock %}
     </head>
     <body>
@@ -23,5 +28,7 @@
         {% block body %}
         
         {% endblock %}
+
+        {% include "partials/_footer.html.twig" %}
     </body>
 </html>
